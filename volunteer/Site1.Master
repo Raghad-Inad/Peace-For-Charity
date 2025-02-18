@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="volunteer.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/fontawesome/css/all.css" rel="stylesheet" />
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--Datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Peace For Charity</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->          <%-- نررررجع للصور--%>
+    <link href="assets/img/team/iconpic-2.ico" rel="icon" >
+    <link href="assets/img/team/iconpic-2.png" rel="iconpic-2" >
+  
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+    
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            margin-right: 180px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        
+         <!-- Main Content Placeholder -->
+      
+        
+    <div id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+
+            
+
+      <div class="logo me-auto">
+            <!-- Uncomment below if you prefer to use an image logo -->
+         
+<%--         <a href="Home.aspx"><img src="assets/img/favicon.ico" alt="" class="img-fluid"></a>--%>
+        <h1 style="font-style: normal; color: #FFFFFF"><a href="Home.aspx"><asp:Localize ID="Localize2" meta:resourceKey="volunteer" Text="Peace For Charity" runat="server"></asp:Localize></a></h1>
+      
+         
+      </div>
+
+             
+      <nav id="navbar" class="navbar">
+          <ul>
+              <li><a class="nav-link scrollto active" href="Home.aspx">
+              <asp:Localize ID="Localize1" meta:resourceKey="Home" Text="Home" runat="server"></asp:Localize></a></li>
+              <asp:LinkButton ID="linkAboutUs" class="nav-link scrollto" runat="server" meta:resourceKey="lbtnAbout" href="#about">About Us</asp:LinkButton>
+            
+              
+             <asp:LinkButton ID="linkTeam" class="nav-link scrollto" runat="server" meta:resourceKey="lbtnTeam" href="#team">Team</asp:LinkButton>
+             
+              <asp:LinkButton class="nav-link scrollto" ID="linkManage" runat="server" AssociatedControlID="linkManage" Visible="False" OnClick="linkManage_Click" meta:resourcekey="linkManageResource1">Manage</asp:LinkButton>
+              <asp:LinkButton class="nav-link scrollto" ID="linkVolunteer"  runat="server" Visible="False"  OnClick="linkVolunteer_Click"  meta:resourcekey="linkVolunteerResource1">volunteer</asp:LinkButton>
+               <asp:LinkButton class="nav-link scrollto" ID="linkLogIn" runat="server" OnClick="linkLogIn_Click" meta:resourcekey="linkLogInResource1">Log In</asp:LinkButton>
+              <asp:LinkButton class="nav-link scrollto" ID="linkSignup" runat="server" OnClick="linkSignup_Click" meta:resourcekey="linkSignupResource1">Sign Up</asp:LinkButton>
+              <asp:LinkButton class="nav-link scrollto" ID="linkLogout" runat="server" Visible="False" OnClick="linkLogout_Click" meta:resourcekey="linkLogoutResource1">Log Out</asp:LinkButton>
+              
+
+            
+            
+          <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+     </div>
+     </div>
+
+       
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+
+                 
+       
+
+
+        
+    
+
+        <!-- Main Content Placeholder -->
+
+         <!-- ======= Footer ======= -->
+           
+         <footer id="footer">
+            <div class="container">
+              
+                <div class="credits">
+
+                             
+                           
+                  <asp:LinkButton class="footerlinks" ID="linkManagment" href="Managment.aspx" runat="server" Visible="False" OnClick="linkManagement_Click" meta:resourcekey="linkManagmentResource1"  >Managment</asp:LinkButton>
+                           
+                             
+                       
+                </div>
+                <br />
+                  <div class="copyright">
+                    &copy; Copyright <strong><span>KFMC</span></strong>. All Rights Reserved
+                </div>
+
+            </div>
+        </footer>
+        <!-- End #footer -->
+
+
+       
+
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+    </form>
+
+
+   
+</body>
+</html>
